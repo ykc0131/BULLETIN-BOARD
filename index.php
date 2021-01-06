@@ -75,7 +75,7 @@ else {
         </table>
       </form>
       <br>
-      <input type = \'submit\' value = \'sign up\' onclick = "location.href=\'sign_up.php\'"> -> join us:)
+      <input type = \'submit\' value = \'sign up\' onclick = "location.href=\'sign-up.php\'"> -> join us:)
 
   ';
 

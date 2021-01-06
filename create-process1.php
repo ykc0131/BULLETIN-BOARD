@@ -1,6 +1,6 @@
 
-#$conn = mysqli_connect("54.175.116.35","work","1234", "tutu");
 <?php
+# $conn = mysqli_connect("54.175.116.35","work","1234", "tutu");
 $conn = mysqli_connect("localhost","root","131719", "SIGNUP");
 
 $file_id ="";
@@ -13,7 +13,7 @@ if(isset($_FILES['file']) && $_FILES['file']['name'] != "") {
     $ext = substr($file['name'], strrpos($file['name'], '.') + 1);
 
     if(!in_array($ext, $allowed_extensions)) {
-        echo "<script> alert(\"업로드할 수 없는 확장자 입니다.\")</script>"
+        echo "<script> alert(\"업로드할 수 없는 확장자 입니다.\")</script>";
     }
 
     $path = md5(microtime()) . '.' . $ext;
@@ -36,6 +36,8 @@ $filtered = array(
   'title' => mysqli_real_escape_string($conn,$_POST['title']),
   'description'=> mysqli_real_escape_string($conn,$_POST['description'])
 );
+
+echo $filtered['idvalue'];
 
 $sql = "
   INSERT INTO descrip

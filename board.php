@@ -19,7 +19,6 @@ if(isset($_GET['id'])){
   $result = mysqli_fetch_array(mysqli_query($conn, $sql));
   $article['id'] = htmlspecialchars($result['id']);
   if(empty($article['id'])){
-
     header('Location:index.php');
   }
   $create = '<input type = "submit" value = "create" onclick = "location.href=\'create.php?id='.$_GET['id'].'\'"> ';

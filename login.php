@@ -18,7 +18,7 @@ else{
   $row = mysqli_fetch_array($result);
   if($filtered['ID'] === $row['id'] AND $filtered['PW'] === $row['pw']){
      ?> <script> alert('로그인되었습니다'){return false;}; </script> <?php
-     header("Location:index.php?id='{$filtered['ID']}'");
+     header("Location:index.php?id={$filtered['ID']}");
    }
   else {
     echo '비밀번호가 일치하지 않습니다.<a href="index.php">돌아가기</a> ';
